@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Redis Demo 2</title>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+          var socket = io();
+          socket.on("nuevo usuario", function(name){
+            document.getElementById("name").innerHTML = name;
+          });
+        </script>        
+    </head>
+    <body>
+        <h1>Redis Pub-Sub Powered</h1>
+        <h2>Ultimo usuario creado: <span id="name"></span></h2>
+    </body>
+</html>
