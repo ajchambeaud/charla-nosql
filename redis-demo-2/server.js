@@ -19,6 +19,5 @@ io.on('connection', function(socket){
   redisClient.on("message", function(channel, message){
     io.emit("nuevo usuario", message);
   });
-    
-  console.log('a user connected');
+
 });
